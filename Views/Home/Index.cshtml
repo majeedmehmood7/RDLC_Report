@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Generate Costing Report";
+}
+
+<h2>Generate Costing Report</h2>
+<div>
+    <form id="reportForm">
+        <label for="costingId">Enter Costing ID:</label>
+        <input type="number" id="costingId" name="costingId" required />
+        <button type="button" onclick="generateReport('pdf')">Generate PDF</button>
+        <button type="button" onclick="generateReport('excel')">Export to Excel</button>
+    </form>
+</div>
+
+<script>
+    function generateReport(format) {
+        const costingId = document.getElementById("costingId").value;
+
+        if (!costingId) {
+            alert("Please enter a valid Costing ID.");
+            return;
+        }
+
+        if (format === 'pdf') {
+            window.open(`/Home/GeneratePDF?costingId=${costingId}`, '_blank');
+        } else if (format === 'excel') {
+            window.open(`/Home/ExportToExcel?costingId=${costingId}`, '_blank');
+        }
+    }
+</script>

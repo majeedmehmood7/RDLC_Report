@@ -1,0 +1,2388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Line Name="Line2">
+        <Top>0.34958in</Top>
+        <Height>0in</Height>
+        <Width>8.28958in</Width>
+        <Style>
+          <Border>
+            <Color>Gray</Color>
+            <Style>Solid</Style>
+            <Width>0.5pt</Width>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line3">
+        <Top>0.69479in</Top>
+        <Height>0in</Height>
+        <Width>8.26958in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Color>Gray</Color>
+            <Style>Solid</Style>
+            <Width>0.5pt</Width>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox5">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Costing From Unlocked Article</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>0.05556in</Top>
+        <Left>2.26236in</Left>
+        <Height>0.225in</Height>
+        <Width>1.76378in</Width>
+        <ZIndex>2</ZIndex>
+        <Visibility>
+          <Hidden>=iif(Fields!lockStatus.Value = 116, true, false)</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Costing From locked Article</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>0.09889in</Top>
+        <Left>0.04709in</Left>
+        <Height>0.225in</Height>
+        <Width>1.76378in</Width>
+        <ZIndex>3</ZIndex>
+        <Visibility>
+          <Hidden>=iif(Fields!lockStatus.Value = 115,true,false)</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Article Code :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>0.41903in</Top>
+        <Left>0.04709in</Left>
+        <Height>0.225in</Height>
+        <Width>0.90961in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="articleCode">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!articleCode.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>articleCode</rd:DefaultName>
+        <Top>0.41903in</Top>
+        <Left>1.02614in</Left>
+        <Height>0.225in</Height>
+        <Width>3in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox8">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Fabric Type :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>0.41903in</Top>
+        <Left>4.11503in</Left>
+        <Height>0.225in</Height>
+        <Width>0.90961in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="FabricType">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!FabricType.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>FabricType</rd:DefaultName>
+        <Top>0.41903in</Top>
+        <Left>5.06631in</Left>
+        <Height>0.225in</Height>
+        <Width>1.23958in</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="setsetupName">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!setsetupName.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>setsetupName</rd:DefaultName>
+        <Top>0.41903in</Top>
+        <Left>6.39792in</Left>
+        <Height>0.225in</Height>
+        <Width>1.8875in</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Customer Name :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>0.75035in</Top>
+        <Left>0.04709in</Left>
+        <Height>0.225in</Height>
+        <Width>1.15961in</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="BuyerName">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!BuyerName.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>BuyerName</rd:DefaultName>
+        <Top>0.75in</Top>
+        <Left>1.26225in</Left>
+        <Height>0.25in</Height>
+        <Width>3.74131in</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="setCityName">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!setCityName.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>setCityName</rd:DefaultName>
+        <Top>1.05556in</Top>
+        <Left>1.26225in</Left>
+        <Height>0.25in</Height>
+        <Width>3.74131in</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="SetCountryName">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!SetCountryName.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>SetCountryName</rd:DefaultName>
+        <Top>1.34722in</Top>
+        <Left>1.26225in</Left>
+        <Height>0.25in</Height>
+        <Width>3.74131in</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line4">
+        <Top>0.69618in</Top>
+        <Left>5.08333in</Left>
+        <Height>0.94444in</Height>
+        <Width>0in</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Color>Gray</Color>
+            <Style>Solid</Style>
+            <Width>0.5pt</Width>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line5">
+        <Top>1.64062in</Top>
+        <Left>0.02in</Left>
+        <Height>0in</Height>
+        <Width>8.33542in</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Color>Gray</Color>
+            <Style>Solid</Style>
+            <Width>0.5pt</Width>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line6">
+        <Top>2.23437in</Top>
+        <Left>0.02in</Left>
+        <Height>0in</Height>
+        <Width>8.33542in</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Color>Gray</Color>
+            <Style>Solid</Style>
+            <Width>0.5pt</Width>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>PI Doc Id &amp; Date :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>1.7059in</Top>
+        <Left>0.04709in</Left>
+        <Height>0.225in</Height>
+        <Width>1.15961in</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="DocNo">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!DocNo.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>DocNo</rd:DefaultName>
+        <Top>1.7059in</Top>
+        <Left>1.26225in</Left>
+        <Height>0.225in</Height>
+        <Width>1.46875in</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="PIDate">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!PIDate.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>PIDate</rd:DefaultName>
+        <Top>1.7059in</Top>
+        <Left>2.7692in</Left>
+        <Height>0.225in</Height>
+        <Width>1.26736in</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Order Qty. :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>1.7059in</Top>
+        <Left>4.29595in</Left>
+        <Height>0.225in</Height>
+        <Width>1.15961in</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Export Terms :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>1.95868in</Top>
+        <Left>0.04709in</Left>
+        <Height>0.225in</Height>
+        <Width>1.15961in</Width>
+        <ZIndex>20</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="setsetupComm">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!setsetupComm.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>setsetupComm</rd:DefaultName>
+        <Top>1.95868in</Top>
+        <Left>1.26225in</Left>
+        <Height>0.225in</Height>
+        <Width>7.02317in</Width>
+        <ZIndex>21</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="orderQty">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!orderQty.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>orderQty</rd:DefaultName>
+        <Top>1.7059in</Top>
+        <Left>5.51111in</Left>
+        <Height>0.225in</Height>
+        <Width>1.46875in</Width>
+        <ZIndex>22</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=iif(Fields!LengthUOMId.Value = 1007, "Yards", "Meters")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>1.7059in</Top>
+        <Left>7.01806in</Left>
+        <Height>0.225in</Height>
+        <Width>1.26736in</Width>
+        <ZIndex>23</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox28">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Currency.Value, "dsPreCosting") + " Exch Rate-Costing:"</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>0.75in</Top>
+        <Left>5.125in</Left>
+        <Height>0.25in</Height>
+        <Width>2.11458in</Width>
+        <ZIndex>24</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="ExchangeRateCurr">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!ExchangeRateCurr.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>ExchangeRateCurr</rd:DefaultName>
+        <Top>0.75in</Top>
+        <Left>7.29514in</Left>
+        <Height>0.25in</Height>
+        <Width>0.99028in</Width>
+        <ZIndex>25</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Credit Term (Days) :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>1.05556in</Top>
+        <Left>5.125in</Left>
+        <Height>0.25in</Height>
+        <Width>2.11458in</Width>
+        <ZIndex>26</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="crdays">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!crdays.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>crdays</rd:DefaultName>
+        <Top>1.05556in</Top>
+        <Left>7.29514in</Left>
+        <Height>0.25in</Height>
+        <Width>0.99028in</Width>
+        <ZIndex>27</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox32">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Currency.Value, "dsPreCosting")+ " Exch Rate-For Discounting:"</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox32</rd:DefaultName>
+        <Top>1.34722in</Top>
+        <Left>5.125in</Left>
+        <Height>0.25in</Height>
+        <Width>2.11458in</Width>
+        <ZIndex>28</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="ExchangeRateCost">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!ExchangeRateCost.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>ExchangeRateCost</rd:DefaultName>
+        <Top>1.34722in</Top>
+        <Left>7.29514in</Left>
+        <Height>0.25in</Height>
+        <Width>0.99028in</Width>
+        <ZIndex>29</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Export Terms :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>2.34687in</Top>
+        <Left>0.04709in</Left>
+        <Height>0.225in</Height>
+        <Width>0.90961in</Width>
+        <ZIndex>30</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="totalEnds">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!totalEnds.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>totalEnds</rd:DefaultName>
+        <Top>2.34687in</Top>
+        <Left>1.01225in</Left>
+        <Height>0.225in</Height>
+        <Width>0.79861in</Width>
+        <ZIndex>31</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="reed">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!reed.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>reed</rd:DefaultName>
+        <Top>2.58854in</Top>
+        <Left>1.01225in</Left>
+        <Height>0.225in</Height>
+        <Width>0.79861in</Width>
+        <ZIndex>32</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="endsperDent">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!endsperDent.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>endsperDent</rd:DefaultName>
+        <Top>2.82882in</Top>
+        <Left>1.01225in</Left>
+        <Height>0.225in</Height>
+        <Width>0.79861in</Width>
+        <ZIndex>33</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="reedWidth">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!reedWidth.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>reedWidth</rd:DefaultName>
+        <Top>3.07049in</Top>
+        <Left>1.01225in</Left>
+        <Height>0.225in</Height>
+        <Width>0.79861in</Width>
+        <ZIndex>34</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="endsperInch">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!endsperInch.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>endsperInch</rd:DefaultName>
+        <Top>3.30937in</Top>
+        <Left>1.01225in</Left>
+        <Height>0.225in</Height>
+        <Width>0.79861in</Width>
+        <ZIndex>35</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="picksperInch">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!picksperInch.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>picksperInch</rd:DefaultName>
+        <Top>3.55104in</Top>
+        <Left>1.01225in</Left>
+        <Height>0.225in</Height>
+        <Width>0.79861in</Width>
+        <ZIndex>36</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox62">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Reed :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox62</rd:DefaultName>
+        <Top>2.58854in</Top>
+        <Left>0.04709in</Left>
+        <Height>0.225in</Height>
+        <Width>0.90961in</Width>
+        <ZIndex>37</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox63">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Ends / Dent :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox63</rd:DefaultName>
+        <Top>2.82882in</Top>
+        <Left>0.04709in</Left>
+        <Height>0.225in</Height>
+        <Width>0.90961in</Width>
+        <ZIndex>38</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox64">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Reed Width :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox64</rd:DefaultName>
+        <Top>3.07049in</Top>
+        <Left>0.04709in</Left>
+        <Height>0.225in</Height>
+        <Width>0.90961in</Width>
+        <ZIndex>39</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox65">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Ends / Inch :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox65</rd:DefaultName>
+        <Top>3.30937in</Top>
+        <Left>0.04709in</Left>
+        <Height>0.225in</Height>
+        <Width>0.90961in</Width>
+        <ZIndex>40</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox66">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Picks / Inch :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox66</rd:DefaultName>
+        <Top>3.55104in</Top>
+        <Left>0.04709in</Left>
+        <Height>0.225in</Height>
+        <Width>0.90961in</Width>
+        <ZIndex>41</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox16">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Color :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>2.34687in</Top>
+        <Left>1.96874in</Left>
+        <Height>0.225in</Height>
+        <Width>0.81782in</Width>
+        <ZIndex>42</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox67">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Weight :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox62</rd:DefaultName>
+        <Top>2.58854in</Top>
+        <Left>1.96874in</Left>
+        <Height>0.225in</Height>
+        <Width>0.81782in</Width>
+        <ZIndex>43</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox68">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Width :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox63</rd:DefaultName>
+        <Top>2.82882in</Top>
+        <Left>1.96874in</Left>
+        <Height>0.225in</Height>
+        <Width>0.81782in</Width>
+        <ZIndex>44</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox69">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=iif(Fields!FabricDesignId.Value = 6532, "Denting :","Weave :")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox64</rd:DefaultName>
+        <Top>3.55104in</Top>
+        <Left>1.96874in</Left>
+        <Height>0.225in</Height>
+        <Width>0.81782in</Width>
+        <ZIndex>45</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="color">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!color.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>color</rd:DefaultName>
+        <Top>2.34687in</Top>
+        <Left>2.82279in</Left>
+        <Height>0.225in</Height>
+        <Width>2.03137in</Width>
+        <ZIndex>46</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="finishWeight">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!finishWeight.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>finishWeight</rd:DefaultName>
+        <Top>2.58854in</Top>
+        <Left>2.82279in</Left>
+        <Height>0.225in</Height>
+        <Width>1in</Width>
+        <ZIndex>47</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="finishWidth">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!finishWidth.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>finishWidth</rd:DefaultName>
+        <Top>2.82882in</Top>
+        <Left>2.82279in</Left>
+        <Height>0.225in</Height>
+        <Width>1in</Width>
+        <ZIndex>48</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox76">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=iif(Fields!FabricDesignId.Value = 6532, Fields!calcWeave1.Value, Fields!weave1.Value)</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox76</rd:DefaultName>
+        <Top>3.55104in</Top>
+        <Left>2.82279in</Left>
+        <Height>0.225in</Height>
+        <Width>1.76054in</Width>
+        <ZIndex>49</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox70">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Composition :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox63</rd:DefaultName>
+        <Top>2.33576in</Top>
+        <Left>5.125in</Left>
+        <Height>0.225in</Height>
+        <Width>0.9324in</Width>
+        <ZIndex>50</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox71">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Finish :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox62</rd:DefaultName>
+        <Top>3.30938in</Top>
+        <Left>1.96874in</Left>
+        <Height>0.225in</Height>
+        <Width>0.81782in</Width>
+        <ZIndex>51</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Style :</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>3.06771in</Top>
+        <Left>1.96874in</Left>
+        <Height>0.225in</Height>
+        <Width>0.81782in</Width>
+        <ZIndex>52</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Quality">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Quality.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Quality</rd:DefaultName>
+        <Top>3.07049in</Top>
+        <Left>2.82279in</Left>
+        <Height>0.225in</Height>
+        <Width>1in</Width>
+        <ZIndex>53</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Finish">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Finish.Value, "dsPreCosting")</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Finish</rd:DefaultName>
+        <Top>3.30938in</Top>
+        <Left>2.82823in</Left>
+        <Height>0.225in</Height>
+        <Width>1in</Width>
+        <ZIndex>54</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line7">
+        <Top>3.8316in</Top>
+        <Height>0in</Height>
+        <Width>8.33542in</Width>
+        <ZIndex>55</ZIndex>
+        <Style>
+          <Border>
+            <Color>Gray</Color>
+            <Style>Solid</Style>
+            <Width>0.5pt</Width>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line8">
+        <Top>2.23437in</Top>
+        <Left>1.88818in</Left>
+        <Height>1.59722in</Height>
+        <Width>0in</Width>
+        <ZIndex>56</ZIndex>
+        <Style>
+          <Border>
+            <Color>Gray</Color>
+            <Style>Solid</Style>
+            <Width>0.5pt</Width>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line9">
+        <Top>2.23437in</Top>
+        <Left>5.00356in</Left>
+        <Height>1.59722in</Height>
+        <Width>0in</Width>
+        <ZIndex>57</ZIndex>
+        <Style>
+          <Border>
+            <Color>Gray</Color>
+            <Style>Solid</Style>
+            <Width>0.5pt</Width>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line10">
+        <Top>4.13021in</Top>
+        <Height>0in</Height>
+        <Width>8.33542in</Width>
+        <ZIndex>58</ZIndex>
+        <Style>
+          <Border>
+            <Color>Gray</Color>
+            <Style>Solid</Style>
+            <Width>0.5pt</Width>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox88">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>WARP CONSUMPTION</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox88</rd:DefaultName>
+        <Top>3.88715in</Top>
+        <Left>0.04709in</Left>
+        <Height>0.17708in</Height>
+        <Width>2.12114in</Width>
+        <ZIndex>59</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>LightGrey</BackgroundColor>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox89">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>WEFT CONSUMPTION</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox88</rd:DefaultName>
+        <Top>5.37327in</Top>
+        <Left>0.04709in</Left>
+        <Height>0.17708in</Height>
+        <Width>2.12114in</Width>
+        <ZIndex>60</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>LightGrey</BackgroundColor>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>10.55208in</Height>
+    <Style />
+  </Body>
+  <Width>8.35542in</Width>
+  <Page>
+    <PageHeader>
+      <Height>0.63417in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="logo">
+          <Source>Embedded</Source>
+          <Value>logo2</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.04441in</Top>
+          <Left>0.04709in</Left>
+          <Height>0.46838in</Height>
+          <Width>0.74872in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Cost Management System</Value>
+                  <Style>
+                    <FontFamily>Century Gothic</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.04441in</Top>
+          <Left>0.86525in</Left>
+          <Height>0.26645in</Height>
+          <Width>2.16228in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Pre Cost Sheet</Value>
+                  <Style>
+                    <FontFamily>Century Gothic</FontFamily>
+                    <FontSize>11pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.2553in</Top>
+          <Left>0.86525in</Left>
+          <Height>0.27485in</Height>
+          <Width>2.16228in</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Line Name="Line1">
+          <Top>0.56835in</Top>
+          <Height>0in</Height>
+          <Width>8.32791in</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Color>Gray</Color>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="costingNumber">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!costingNumber.Value, "dsPreCosting")</Value>
+                  <Style>
+                    <FontFamily>Century Gothic</FontFamily>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>costingNumber</rd:DefaultName>
+          <Top>0.01941in</Top>
+          <Left>6.73125in</Left>
+          <Height>0.22292in</Height>
+          <Width>1.60417in</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="costingDate">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!costingDate.Value, "dsPreCosting")</Value>
+                  <Style>
+                    <FontFamily>Century Gothic</FontFamily>
+                    <FontSize>9pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>costingDate</rd:DefaultName>
+          <Top>0.29613in</Top>
+          <Left>6.73125in</Left>
+          <Height>0.22083in</Height>
+          <Width>1.60417in</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
+    <LeftMargin>0.16in</LeftMargin>
+    <RightMargin>0.11in</RightMargin>
+    <TopMargin>0.1in</TopMargin>
+    <BottomMargin>0.1in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="dsPreCosting">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>135eefd2-fbba-4874-a0c0-7dd122cbb272</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dsPreCosting">
+      <Query>
+        <DataSourceName>dsPreCosting</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="costingId">
+          <DataField>costingId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="costingNumber">
+          <DataField>costingNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="costingDate">
+          <DataField>costingDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ExchangeRateCurr">
+          <DataField>ExchangeRateCurr</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="crdays">
+          <DataField>crdays</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ExchangeRateCost">
+          <DataField>ExchangeRateCost</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="orderQty">
+          <DataField>orderQty</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="LengthUOMId">
+          <DataField>LengthUOMId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="reedSpace">
+          <DataField>reedSpace</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="color">
+          <DataField>color</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="totalEnds">
+          <DataField>totalEnds</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="reed">
+          <DataField>reed</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="endsperDent">
+          <DataField>endsperDent</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="reedWidth">
+          <DataField>reedWidth</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="endsperInch">
+          <DataField>endsperInch</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="picksperInch">
+          <DataField>picksperInch</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="weave1">
+          <DataField>weave1</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="weave2">
+          <DataField>weave2</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="twilldirection">
+          <DataField>twilldirection</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="yarncostmtr">
+          <DataField>yarncostmtr</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="financecost">
+          <DataField>financecost</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="fcpcnt">
+          <DataField>fcpcnt</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="commmerchandiser">
+          <DataField>commmerchandiser</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="sellprice">
+          <DataField>sellprice</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="commexport">
+          <DataField>commexport</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="commpcnt">
+          <DataField>commpcnt</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="threeppcnt">
+          <DataField>threeppcnt</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="comm3rdparty">
+          <DataField>comm3rdparty</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="pmpcntus">
+          <DataField>pmpcntus</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="profitmarginus">
+          <DataField>profitmarginus</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="profitMarginPKR">
+          <DataField>profitMarginPKR</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="ActPriceWdProfit">
+          <DataField>ActPriceWdProfit</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="minprftpcnt">
+          <DataField>minprftpcnt</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="expectedprice">
+          <DataField>expectedprice</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="MinexpectedPrice">
+          <DataField>MinexpectedPrice</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="setCityName">
+          <DataField>setCityName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SetCountryName">
+          <DataField>SetCountryName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="articleid">
+          <DataField>articleid</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="prftpcnt">
+          <DataField>prftpcnt</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="pmpcntpkr">
+          <DataField>pmpcntpkr</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="DocNo">
+          <DataField>DocNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PIDate">
+          <DataField>PIDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="articleCode">
+          <DataField>articleCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="lockStatus">
+          <DataField>lockStatus</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Overhead">
+          <DataField>Overhead</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="articleFor">
+          <DataField>articleFor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="finishWeight">
+          <DataField>finishWeight</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="finishWidth">
+          <DataField>finishWidth</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="calcWeave1">
+          <DataField>calcWeave1</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="calcWeave2">
+          <DataField>calcWeave2</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="ArticleType">
+          <DataField>ArticleType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FabricDesignId">
+          <DataField>FabricDesignId</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Quality">
+          <DataField>Quality</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="setsetupName">
+          <DataField>setsetupName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Finish">
+          <DataField>Finish</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FabricType">
+          <DataField>FabricType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BuyerSubId">
+          <DataField>BuyerSubId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BuyerName">
+          <DataField>BuyerName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Currency">
+          <DataField>Currency</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="setsetupComm">
+          <DataField>setsetupComm</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsPreCosting</rd:DataSetName>
+        <rd:SchemaPath>D:\Textile Programe Code 2019\ERP Textile\ERP APP\RDLC Reports\dsPreCosting.xsd</rd:SchemaPath>
+        <rd:TableName>vcmsPrecostingFull</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>vcmsPrecostingFullTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="logo2">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAANEAAAB2CAYAAABWI3a5AAAACXBIWXMAAAsSAAALEgHS3X78AAA7UGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgICAgICAgICB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIgogICAgICAgICAgICB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5h
+ZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNyAoV2luZG93cyk8L3htcDpDcmVhdG9yVG9vbD4KICAgICAgICAgPHhtcDpDcmVhdGVEYXRlPjIwMjQtMDYtMDFUMTA6NTA6MTcrMDU6MDA8L3htcDpDcmVhdGVEYXRlPgogICAgICAgICA8eG1wOk1ldGFkYXRhRGF0ZT4yMDI0LTA2LTAxVDEwOjUwOjE3KzA1OjAwPC94bXA6TWV0YWRhdGFEYXRlPgogICAgICAgICA8eG1wOk1vZGlmeURhdGU+MjAyNC0wNi0wMVQxMDo1MDoxNyswNTowMDwveG1wOk1vZGlmeURhdGU+CiAgICAgICAgIDx4bXBNTTpJbnN0YW5jZUlEPnhtcC5paWQ6MmQzOGVlNTctNTQ2Zi05YzQ2LWI2YWQtYTMxMTdiZTZjZmVmPC94bXBNTTpJbnN0YW5jZUlEPgogICAgICAgICA8eG1wTU06RG9jdW1lbnRJRD5hZG9iZTpkb2NpZDpwaG90b3Nob3A6ZDJlYTgyNjEtMWZkYS0xMWVmLWI3NGUtYWU0ZjI5YzAwNTk3PC94bXBNTTpEb2N1bWVudElEPgogICAgICAgICA8eG1wTU06T3JpZ2luYWxEb2N1bWVudElEPnhtcC5kaWQ6MDFmZjRkMjItYWZhOS1hNzRmLTkzZjItOGUxMWJlN2NmZmRhPC94bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ+CiAgICAgICAgIDx4bXBNTTpIaXN0b3J5PgogICAgICAgICAgICA8cmRmOlNlcT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDphY3Rpb24+Y3JlYXRlZDwvc3RF
+dnQ6YWN0aW9uPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6aW5zdGFuY2VJRD54bXAuaWlkOjAxZmY0ZDIyLWFmYTktYTc0Zi05M2YyLThlMTFiZTdjZmZkYTwvc3RFdnQ6aW5zdGFuY2VJRD4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OndoZW4+MjAyNC0wNi0wMVQxMDo1MDoxNyswNTowMDwvc3RFdnQ6d2hlbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OnNvZnR3YXJlQWdlbnQ+QWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpPC9zdEV2dDpzb2Z0d2FyZUFnZW50PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDphY3Rpb24+c2F2ZWQ8L3N0RXZ0OmFjdGlvbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0Omluc3RhbmNlSUQ+eG1wLmlpZDoyZDM4ZWU1Ny01NDZmLTljNDYtYjZhZC1hMzExN2JlNmNmZWY8L3N0RXZ0Omluc3RhbmNlSUQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDp3aGVuPjIwMjQtMDYtMDFUMTA6NTA6MTcrMDU6MDA8L3N0RXZ0OndoZW4+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpzb2Z0d2FyZUFnZW50PkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE3IChXaW5kb3dzKTwvc3RFdnQ6c29mdHdhcmVBZ2VudD4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OmNoYW5nZWQ+Lzwvc3RFdnQ6Y2hhbmdlZD4KICAgICAgICAgICAgICAgPC9yZGY6bGk+CiAgICAgICAg
+ICAgIDwvcmRmOlNlcT4KICAgICAgICAgPC94bXBNTTpIaXN0b3J5PgogICAgICAgICA8cGhvdG9zaG9wOlRleHRMYXllcnM+CiAgICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgICAgICAgPHBob3Rvc2hvcDpMYXllck5hbWU+VGV4dGlsZXMgKFB2dC4pIExpbWl0ZWQ8L3Bob3Rvc2hvcDpMYXllck5hbWU+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJUZXh0PlRleHRpbGVzIChQdnQuKSBMaW1pdGVkPC9waG90b3Nob3A6TGF5ZXJUZXh0PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgICA8L3Bob3Rvc2hvcDpUZXh0TGF5ZXJzPgogICAgICAgICA8cGhvdG9zaG9wOkNvbG9yTW9kZT4zPC9waG90b3Nob3A6Q29sb3JNb2RlPgogICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3BuZzwvZGM6Zm9ybWF0PgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICAgICA8dGlmZjpYUmVzb2x1dGlvbj43MTk4NDAvMTAwMDA8L3RpZmY6WFJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOllSZXNvbHV0aW9uPjcxOTg0MC8xMDAwMDwvdGlmZjpZUmVzb2x1dGlvbj4KICAgICAgICAgPHRpZmY6UmVzb2x1dGlvblVuaXQ+MjwvdGlmZjpSZXNvbHV0aW9uVW5pdD4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT42NTUzNTwvZXhpZjpD
+b2xvclNwYWNlPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MjA5PC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjExODwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAg
+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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>dca9e3ac-5414-4572-adde-716d0d80f8a2</rd:ReportID>
+</Report>
